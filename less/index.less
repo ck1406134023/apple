@@ -1,0 +1,574 @@
+/*.nav{
+  height: 44px;
+  background:#333333;
+  & .max-nav{
+    height:100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    overflow: hidden;
+    & .min-nav{
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 50px;
+      padding-right: 50px;
+      font-size: 16px;
+      background:#333333;
+      .daohangtu{
+        display: none;
+        margin-left: -35px;
+        margin-right: -35px;
+        &:after{
+          content:"";
+          height: 0;
+          line-height: 0;
+          clear: both;
+          font-size: 0;
+          width: 100%;
+          display: inline-block;
+        }
+        & a img{
+          width:20px;
+          margin-top: 3px;
+        }
+      }
+      & a{
+        color:#fff;
+        line-height: 2.75;
+        display: inline-block;
+        opcity:0.65;
+        list-style: none;
+        text-align: center;
+
+      }
+      & a:hover{
+        color:#999;
+      }
+      &:after{
+        content:"";
+        height: 0;
+        line-height: 0;
+        clear: both;
+        font-size: 0;
+        width: 100%;
+        display: inline-block;
+      }
+      & a img{
+        width:20px;
+        margin-top: 3px;
+      }
+    }
+
+  }
+}
+@media screen and (max-width: 767px){
+  .nav .max-nav{
+    overflow:hidden;
+    .min-nav a{
+      display: none;
+      text-align: left;
+      border-bottom: 1px solid #aaa;
+    }
+    .min-nav .daohangtu a{
+      border: none;
+    }
+    .min-nav a:last-of-type{
+      display:none;
+    }
+    .min-nav a:first-of-type{
+      display:none;
+    }
+    .min-nav .daohangtu{
+      display: block;
+      a{
+        display: inline-block;
+        text-align: justify;
+      }
+    }
+    .min-nav .daohangtu a:last-of-type{
+      display: inline-block;
+    }
+    .min-nav .daohangtu a:first-of-type{
+      display:inline-block;
+    }
+  }
+
+  .daohangtu a{
+    display: inline-block;
+  }
+}*/
+*{
+  margin:0;
+  padding:0;
+  font-family:"微软雅黑";
+}
+a{
+  text-decoration: none;
+}
+ul,li{
+  list-style:none;
+}
+
+.nav{
+  &-out{
+    width:100%;
+    height:48px;
+    max-height:44px;
+    background:rgba(0,0,0,0.8);
+    font-size:16px;
+    color:#fff;
+    position: relative;
+  }
+  &-inner{
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 22px;
+    text-align: justify;
+  }
+  &-lists{
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 22px;
+    line-height:44px;
+    height:44px;
+    text-align:justify;
+
+    li:hover{
+      opacity:0.6;
+      cursor: pointer;
+      transition: all .5s ease-out;
+    }
+    li{
+      height:44px;
+      margin:0 10px;
+      width:auto;
+      display:inline-block;
+      a{
+        color: #fff;
+        img{
+          width:20px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  &-lists:after{
+    content:"";
+    display:inline-block;
+    line-height: 0;
+    height: 0;
+    width:100%;
+  }
+}
+.nav{
+  &-inner1{
+    width: 100%;
+    max-width: 735px;
+    height: 44px;
+    position:relative;
+    display: none;
+    z-index:100;
+  }
+  &-lists1{
+    margin: 0 auto;
+    max-width: 735px;
+    height:44px;
+    line-height:44px;
+    text-align:justify;
+    position: relative;
+    li:hover{
+      opacity:0.6;
+      cursor: pointer;
+      transition: all .5s ease-out;
+    }
+    li{
+      height:44px;
+      width:auto;
+      display:inline-block;
+      line-height:44px;
+      position: absolute;
+      width:44px;
+      text-align: center;
+      margin:0 10px;
+      a{
+        color: #fff;
+        img {
+          width:20px;
+          margin-top: 5px;
+        }
+      }
+      &:first-child{
+        font-size:36px;
+        font-weight:500;
+      }
+      &:last-child{
+        right:0;
+      }
+      &:nth-child(2){
+        left:50%;
+        margin-left:-28px;
+      }
+    }
+  }
+}
+@media screen and (max-width:735px){
+  .nav-inner{
+     display:none;
+   }
+  .nav-inner1{
+     display:block;
+   }
+}
+.nav-menu{
+  &{
+    width:100%;
+    height:100%;
+    position:fixed;
+    margin-top:-44px;
+    background: #000;
+    z-index:10000;
+    padding:0 48px;
+    display:none;
+  }
+  li:first-child{
+    margin-top:44px;
+  }
+  li{
+    margin-top:12px;
+    border-bottom:1px solid #333;
+    height:47px;
+    color:#fff;
+    line-height:40px;
+    box-sizing:content-box;
+  }
+  a{
+    width:100%;
+    height:47px;
+    color:#fff;
+    font-size:22px;
+  }
+  a:hover{
+    opacity:0.6;
+    cursor: pointer;
+    transition: all .5s ease-out;
+  }
+}
+/*头部结束*/
+/*banner开始*/
+.banner{
+  width:100%;
+  height:650px;
+  position: relative;
+  overflow: hidden;
+  & div{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left: 0;
+
+    a{
+      display: block;
+      font-size: 0;
+      width:100%;
+      height:100%;
+      background-position:center center;
+      background-size:cover;
+      background-repeat:no-repeat;
+    }
+  }
+  & div.anniu-box{
+    display:block;
+    width:100%;
+    height:28px;
+    position:absolute;
+    left: 0;
+    bottom: 13px!important;
+    .anniu{
+      width:auto;
+      display: block;
+      margin-left:45%;
+      a{
+        display:block;
+        float: left;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #999999;
+        margin-right: 20px;
+      }
+      .add{
+        display:block;
+        float: left;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #fff;
+        border:1px solid green;
+        margin-right: 20px;
+      }
+    }
+  }
+  .button{
+    width:100%;
+    height:128px;
+    position:absolute;
+    z-index:50;
+    top:0;
+    bottom:0;
+    margin:auto 0;
+    .button-l,.button-r{
+      width: 67px;
+      height: 128px;
+      text-align: center;
+      overflow: hidden;
+      color: #666;
+      background-color: transparent;//透明
+      border-radius: 4px;
+      display: block;
+      font-size: 100px;
+      font-style: normal;
+      font-weight: 200;
+      font-family: "AppleIcons";
+      cursor:pointer;
+
+    }
+    .button-l{
+      float: left;
+      margin-left:30px;
+    }
+    .button-r{
+      float:right;
+      margin-right:30px;
+    }
+  }
+
+}
+@media screen and (max-width: 767px){
+  .banner{
+    height: 391px;
+  }
+}
+/*banner结束*/
+
+
+/*product开始*/
+.product{
+  width: 100%;
+  height: 200px;
+
+  .product-first{
+    width: 25%;
+    float: left;
+    height:200px;
+    border:1px solid #fff;
+    box-sizing:border-box;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size:cover;
+    }
+  }
+}
+@media screen and (max-width: 1068px) and (min-width: 768px){
+  .product{
+
+    height: 400px;
+    .product-first{
+      width: 50%;
+      border:1px solid #fff;
+      box-sizing:border-box;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .product{
+
+    height: 800px;
+    .product-first{
+      width: 100%;
+      border:1px solid #fff;
+      box-sizing:border-box;
+    }
+  }
+}
+/*product结束*/
+/*footer开始*/
+.footer{
+  .jiahao{
+    display: none;
+    position: absolute;
+    right: 5px;
+    top:5px;
+    line-height: 39px;
+    color:#000;
+    font-size: 16px;
+    z-index: 200;
+  }
+  width: 100%;
+  font-size: 12px;
+  line-height:1.66667;
+  font-weight: 400;
+  letter-spacing: normal;
+  background-color: #f2f2f2;
+  color: #666;
+
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  .min-foot{
+    max-width: 980px;
+    margin:36px auto;
+    padding: 0 22px;
+    overflow: hidden;
+    .foot-first,.foot-second{
+      width:20%;
+      min-height: 2px;
+      display: inline-block;
+      float: left;
+      position: relative;
+      .foot-min{
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .title{
+        font-weight: 600;
+        font-size: 12px;
+        color:#333;
+        position: relative;
+      }
+      .title:hover{
+        cursor: pointer;
+      }
+      ul{
+        height: auto;
+      }
+      ul li{
+        color: #666;
+        font-weight: 400;
+      }
+      ul li:hover{
+        color: #333;
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+}
+@media screen and (max-width: 768px){
+
+  .footer .min-foot .foot-first,.footer .min-foot .foot-second .foot-min{
+    width: 100%;
+    border-bottom: 1px solid #999;
+    & .title{
+      display: block;
+      height: 39px;
+      line-height:39px;
+    }
+    .jiahao{
+      display: block;
+    }
+
+      ul li{
+        height: 30px;
+        line-height:100%;
+        display: none;
+
+
+    }
+
+  }
+  .footer .min-foot .foot-second{
+
+    width: 100%;
+    border-bottom: none;
+    .foot-min{
+
+      width: 100%;
+      border-bottom: 1px solid #999;
+      margin-bottom:0;
+      .jiahao{
+        display: block;
+        z-index: 20;
+      }
+    }
+  }
+
+}
+.clf:after{
+  content: "";
+  height: 0;
+  clear: both;
+}
+.footer{
+
+    .bottom{
+      display: block;
+      max-width:980px;
+      padding: 0 20px;
+      height: auto;
+      margin: 20px auto;
+      .bot-first{
+        border-bottom: 1px solid #e3e3e3;
+        .tit{
+          font-size: 12px;
+
+        }
+      }
+      .bot-second{
+        padding-top: 5px;
+        overflow: hidden;
+        .tit{
+          float: left;
+        }
+        .tit2{
+          float: left;
+
+
+          span{
+            padding:3px 5px;
+            border-right:1px solid #333;
+            a{
+              color:#666;
+            }
+          }
+        }
+        .zh{
+          float:right;
+        }
+      }
+    }
+  }
+@media screen and (max-width:768px){
+  .bottom{
+    .bot-first{
+      margin-bottom: 60px;
+    }
+    .bot-second{
+      position: relative;
+      overflow: visible;
+      margin-top: -30px;
+      padding-top: 60px;
+      .zh{
+        position: absolute;
+        top:-20px;
+        left:3px;
+        z-index: 100;
+      }
+      .tit,.bot-second .tit2{
+        width:100%;
+        padding-left: 0;
+        & span:first-of-type{
+          padding-left: 0;
+        }
+      }
+
+    }
+  }
+}
+/*footer结束*/
