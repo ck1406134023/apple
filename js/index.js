@@ -151,6 +151,9 @@ $(function(){
             console.log(2);
             $('ul li', $('.min-foot')).css({'display': 'block'});
             $('ul',$('.min-foot')).css({'height': 'auto'});
+        }else{
+            $('ul',$('.min-foot')).css({'height': '0'});
+            $('ul li',$('.min-foot')).css({'display': 'none'});
         }
     });
 

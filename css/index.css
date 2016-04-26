@@ -236,6 +236,13 @@ li {
   line-height: 40px;
   box-sizing: content-box;
 }
+.nav-menu li a {
+  color: #fff;
+}
+.nav-menu li a img {
+  width: 20px;
+  margin-top: 5px;
+}
 .nav-menu a {
   width: 100%;
   height: 47px;
@@ -340,7 +347,6 @@ li {
     height: 391px;
   }
 }
-@media screen and (max-width: )
 /*banner结束*/
 /*product开始*/
 .product {
