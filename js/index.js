@@ -34,10 +34,10 @@ $(function(){
     }*/
     var btn=$(".nav-lists1 li:first");
     var navMenu=$(".nav-menu");
-    btn.click(function() {
+    btn.click(function(){
         if (btn.html() == '=') {
             btn.html('x');
-            navMenu.slideDown(1000);
+            navMenu.slideDown();
             $('body').css('overflow', 'hidden');
         }
         else if (btn.html() == 'x') {
@@ -137,6 +137,8 @@ $(function(){
         xiaobtn.eq(index1).addClass("add");
         now=next=index1;
     });
+
+
 
     /*baner轮播结束*/
 
